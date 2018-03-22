@@ -1,6 +1,4 @@
 #include"keyboard.h"
-
-
 float prevTime; //이전 프레임의 시작 시간 
 float currTime; //현재 프레임의 시작 시간 
 float deltaTime; //현재 프레임과 이전 프레임의 시간 간격

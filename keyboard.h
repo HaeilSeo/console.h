@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<windows.h>
+
 void initKey();
 void updateKey();
 bool GetKey(int keyCode);

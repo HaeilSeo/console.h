@@ -31,6 +31,7 @@ DDS_FILE* readDDS(const char* filename) {
 	return DDS;
 }
 DDS_FILE* readDDSRect(const char* filename, int x, int y, int width, int height) {
+	
 	FILE* fp = NULL;
 	DDS_FILE* DDS = NULL;
 
@@ -69,7 +70,7 @@ DDS_FILE* readDDSRect(const char* filename, int x, int y, int width, int height)
 	fseek(fp, offset, SEEK_CUR);		//데이타 읽기 시작 위치로 이동
 
 	for (int k = 0; k < height; k++) {
-		fread(&DDS->data[k + width * 4], lineSize, 1, fp);	//파일에서 한줄을 읽는다.
+		fread(&DDS->data[k * width * 4], lineSize, 1, fp);	//파일에서 한줄을 읽는다.
 		fseek(fp, lineGap, SEEK_CUR);						//파일에서 읽고 남은 줄을 건너뛰고.. 다음 읽을 위치로 이동한다.
 	}
 
