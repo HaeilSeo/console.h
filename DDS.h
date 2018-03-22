@@ -39,4 +39,5 @@ struct DDS_FILE {
 };
 
 
-DDS_FILE* readDDS(const char* file);
+DDS_FILE* readDDS(const char* filename);
+DDS_FILE* readDDSRect(const char* filename, int x, int y, int width, int height);
